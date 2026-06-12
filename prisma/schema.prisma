@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"  // Yeh aapke lib folder ke andar client banayega
+}
+
+datasource db {
+  provider = "postgresql"
+}
+// 1. Leads Table
+model Lead {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  company   String?
+  message   String
+  createdAt DateTime @default(now())
+}
+
+// 2. Insights / Blogs Table
+model Post {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  description String
+  content     String   
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
+
+// 3. Careers / Jobs Table
+model Job {
+  id          String   @id @default(cuid())
+  title       String
+  department  String   
+  location    String   
+  type        String   
+  description String
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
