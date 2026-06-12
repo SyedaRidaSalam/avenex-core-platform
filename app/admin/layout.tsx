@@ -1,31 +1,52 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
+  const navItems = [
+    { name: "CORE OVERVIEW", path: "/admin" },
+    { name: "MANAGE INSIGHTS", path: "/admin/insights" },
+    { name: "MANAGE CAREERS", path: "/admin/careers" },
+  ];
+
   return (
-    <div className="bg-zinc-950 text-white min-h-screen flex flex-col md:flex-row pt-20">
-      {/* Sidebar Control Node */}
-      <aside className="w-full md:w-64 bg-black border-r border-zinc-900 p-6 flex flex-col gap-6">
-        <div>
-          <span className="text-[9px] font-mono text-zinc-600 uppercase tracking-widest block">Operational Core</span>
-          <h2 className="text-sm font-bold tracking-wider text-zinc-300">AVENEX ADMIN</h2>
+    <div className="bg-black text-white min-h-screen flex flex-col md:flex-row">
+      {/* Sidebar - Both desktop & mobile aligned */}
+      <aside className="w-full md:w-72 border-b md:border-b-0 md:border-r border-zinc-900 p-8 flex flex-col gap-12 bg-[#050505] md:mt-21 mt-15">
+        <div> 
+          <h2 className="text-[10px] font-bold tracking-[0.2em] text-zinc-500 uppercase">Avenex Control</h2>
+          <h1 className="text-xl font-light tracking-tight mt-1 text-white">SYSTEM ADMIN</h1>
         </div>
         
-        <nav className="flex flex-col gap-3 text-xs font-mono tracking-wide">
-          <Link href="/admin" className="text-zinc-400 hover:text-white p-2 hover:bg-zinc-900 transition-all">
-            // CORE OVERVIEW
-          </Link>
-          <Link href="/admin/insights" className="text-zinc-400 hover:text-white p-2 hover:bg-zinc-900 transition-all">
-            // MANAGE INSIGHTS
-          </Link>
-          <Link href="/admin/careers" className="text-zinc-400 hover:text-white p-2 hover:bg-zinc-900 transition-all">
-            // MANAGE CAREERS
-          </Link>
+        <nav className="flex flex-col gap-2">
+          {navItems.map((item) => {
+            const isActive = pathname === item.path;
+            return (
+              <Link 
+                key={item.path} 
+                href={item.path}
+                className={`text-[10px] tracking-[0.2em] uppercase py-4 px-4 transition-all duration-300 flex items-center gap-3
+                  ${isActive 
+                    ? "text-white bg-zinc-900/50 border-l-2 border-white" 
+                    : "text-zinc-600 hover:text-zinc-300 hover:bg-zinc-900/20 border-l-2 border-transparent"
+                  }`}
+              >
+                {isActive && <div className="w-1 h-1 bg-white rounded-full" />}
+                {item.name}
+              </Link>
+            );
+          })}
         </nav>
       </aside>
 
-      {/* Dynamic Content Panel */}
-      <main className="flex-1 p-8 md:p-12 overflow-y-auto">
-        {children}
+      {/* Main Content - Synced Margin Top */}
+      <main className="flex-1 p-8 md:p-20 md:mt-8 overflow-y-auto">
+        <div className="max-w-5xl w-full">
+          {children}
+        </div>
       </main>
     </div>
   );

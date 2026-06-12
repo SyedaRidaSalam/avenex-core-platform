@@ -18,8 +18,10 @@ export default function SolutionsPage() {
   ];
 
   return (
-    <main className="bg-black text-white min-h-screen pt-40 px-6">
-      <div className="max-w-7xl mx-auto space-y-16 pb-24">
+    // 'pt-20 md:pt-40' se mobile par padding kam aur desktop par original rakhi hai
+    <main className="bg-black text-white min-h-screen pt-20 md:pt-40 px-6">
+      <div className="max-w-7xl mx-auto space-y-12 md:space-y-16 pb-24">
+        
         {/* Header */}
         <div className="max-w-xl space-y-2">
           <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">02 / CAPABILITIES</span>
@@ -32,10 +34,11 @@ export default function SolutionsPage() {
         {/* Structural Stack Grid */}
         <div className="border-t border-zinc-900 divide-y divide-zinc-900">
           {coreSolutions.map((sol) => (
-            <div key={sol.num} className="py-12 grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
-              <span className="text-xs font-mono text-zinc-600 tracking-widest">{sol.num} / PROTOCOL</span>
+            // 'py-8 md:py-12' se rows ke beech ka space mobile par compact kar diya
+            <div key={sol.num} className="py-8 md:py-12 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 items-start">
+              <span className="text-[9px] font-mono text-zinc-600 tracking-widest">{sol.num} / PROTOCOL</span>
               <div className="md:col-span-2 space-y-2">
-                <h3 className="text-lg font-medium text-zinc-200 tracking-wide">{sol.title}</h3>
+                <h3 className="text-sm md:text-lg font-medium text-zinc-200 tracking-wide">{sol.title}</h3>
                 <p className="text-xs text-zinc-400 font-light leading-relaxed">{sol.desc}</p>
               </div>
               <div className="text-right hidden md:block">

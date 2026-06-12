@@ -16,8 +16,8 @@ export default async function CareersPage() {
   const openPositions = await getActiveJobs();
 
   return (
-    <main className="bg-black text-white min-h-screen pt-40 px-6">
-      <div className="max-w-7xl mx-auto space-y-16 pb-24">
+      <main className="bg-black text-white min-h-screen pt-20 md:pt-40 px-6">
+      <div className="max-w-7xl mx-auto space-y-12 md:space-y-16 pb-24">
         {/* Header */}
         <div className="max-w-xl space-y-2">
           <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">

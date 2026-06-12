@@ -42,7 +42,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-black text-white min-h-screen pt-32 px-6 flex items-center">
+    <main className="bg-black text-white min-h-screen pt-10 px-6 flex items-center">
       <div className="max-w-xl mx-auto w-full space-y-8 py-12">
         
         {/* Title Block */}
