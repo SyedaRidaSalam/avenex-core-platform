@@ -168,3 +168,11 @@ input:-webkit-autofill:focus {
 .animate-slide-in {
   animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+@layer base {
+  .hero-grid {
+    background-image: 
+      linear-gradient(to right, #111 1px, transparent 1px), 
+      linear-gradient(to bottom, #111 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+}

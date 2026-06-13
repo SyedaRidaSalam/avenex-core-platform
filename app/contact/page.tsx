@@ -56,17 +56,17 @@ export default function ContactPage() {
     <main className="bg-black text-white min-h-screen pt-10 px-6 flex items-center">
       <div className="max-w-xl mx-auto w-full space-y-8 py-12">
         {/* Title Block */}
-        <div className="space-y-2">
+
+             <div className="max-w-xl space-y-2">
           <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">
-            01 / CONNECT
+            04 / Connect
           </span>
-          <h1 className="text-3xl md:text-4xl font-light tracking-tight text-zinc-100">
-            ENGAGE AVENEX SYSTEMS
-          </h1>
+          <h1 className="text-3xl md:text-5xl font-light tracking-tight uppercase">Engage<span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-700">
+            &nbsp;AVENEX
+            </span></h1>
           <p className="text-xs md:text-sm mt-5 text-zinc-400 font-light tracking-wide leading-relaxed">
-            Submit your enterprise specifications or structural infrastructure
-            requirements below.
-          </p>
+             Submit your enterprise specifications or structural infrastructure
+            requirements below.    </p>
         </div>
 
         {/* Form Element */}

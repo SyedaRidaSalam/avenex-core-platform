@@ -7,9 +7,13 @@ export default function AboutPage() {
             05 / THE AVENEX ORIGIN
           </span>
           <h1 className="text-3xl md:text-5xl font-light tracking-tight text-white uppercase">
-            Built for <span className="text-zinc-500">Speed.</span>
+            Built for<span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-700">
+            &nbsp;Speed
+            </span>
             <br />
-            Engineered for <span className="text-zinc-500">Scale.</span>
+            Engineered for<span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-700">
+            &nbsp;Scale
+            </span>
           </h1>
           <p className="text-xs md:text-sm text-zinc-400 font-light tracking-wide leading-relaxed max-w-xl mt-5">
             Avenex Systems is a high-growth technology startup born from the
@@ -47,35 +51,42 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Interactive/Highlight Cards Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mt-16 md:mt-24">
-          {[
-            {
-              label: "Agility",
-              desc: "Rapid deployment cycles that match market demands.",
-            },
-            {
-              label: "Precision",
-              desc: "No unnecessary layers. Just pure, functional code.",
-            },
-            {
-              label: "Ambition",
-              desc: "Redefining how enterprise software is architected.",
-            },
-          ].map((item, idx) => (
-            <div
-              key={idx}
-              className="border border-zinc-900 p-6 md:p-8 hover:border-zinc-700 transition-all duration-300 group cursor-default"
-            >
-              <h3 className="text-xs md:text-sm font-medium mb-2 md:mb-3 group-hover:text-zinc-300 uppercase tracking-widest">
-                {item.label}
-              </h3>
-              <p className="text-xs md:text-sm text-zinc-500 font-light group-hover:text-zinc-400 leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+   <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 auto-rows-[180px] mt-16 md:mt-24">
+  {[
+    {
+      label: "Agility",
+      desc: "Rapid deployment cycles that match market demands.",
+    },
+    {
+      label: "Precision",
+      desc: "No unnecessary layers. Just pure, functional code.",
+    },
+    {
+      label: "Ambition",
+      desc: "Redefining how enterprise software is architected.",
+    },
+  ].map((item, idx) => (
+    <div
+      key={idx}
+      className="group relative overflow-hidden bg-zinc-950/30 border border-zinc-900 p-6 flex flex-col justify-center hover:border-zinc-700 transition-all duration-300"
+    >
+      {/* Premium Monochrome Hover */}
+      <div className="absolute inset-0 z-0 bg-zinc-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+      
+      <div className="relative z-10 space-y-2">
+        <h3 className="text-[12px] font-medium tracking-[0.2em] uppercase text-zinc-100 group-hover:text-white transition-colors">
+          {item.label}
+        </h3>
+        <p className="text-xs md:text-sm text-zinc-500 font-light leading-relaxed group-hover:text-zinc-400 transition-colors">
+          {item.desc}
+        </p>
+      </div>
+
+      {/* Subtle Corner Glow */}
+      <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-zinc-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+    </div>
+  ))}
+</div>
       </div>
     </main>
   );

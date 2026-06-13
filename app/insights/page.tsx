@@ -27,7 +27,9 @@ export default async function InsightsPage() {
             03 / KNOWLEDGE BASE
           </span>
           <h1 className="text-3xl md:text-5xl font-light tracking-tight">
-            AVENEX INSIGHTS
+            AVENEX<span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-700">
+            &nbsp;INSIGHTS
+            </span>
           </h1>
           <p className="text-xs md:text-sm mt-5 text-zinc-400 font-light tracking-wide leading-relaxed">
             Critical analysis and technical research documentation straight from
