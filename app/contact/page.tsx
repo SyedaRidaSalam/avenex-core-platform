@@ -59,7 +59,7 @@ export default function ContactPage() {
       <div className="max-w-xl mx-auto w-full space-y-8 py-12">
         <div className="max-w-xl space-y-2">
           <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">
-            04 / Join the protocol
+            07 / Join the protocol
           </span>
           <h1 className="text-3xl md:text-5xl font-light tracking-tight uppercase">
             Engage<span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-700">

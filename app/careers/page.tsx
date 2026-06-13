@@ -14,7 +14,7 @@ export default async function CareersPage() {
       <div className="max-w-3xl mx-auto space-y-16">
         <div className="max-w-xl space-y-2">
           <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">
-            04 / Engineering the future
+            06 / Engineering the future
           </span>
           <h1 className="text-3xl md:text-5xl font-light tracking-tight">JOIN With<span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-700">
             &nbsp;AVENEX
