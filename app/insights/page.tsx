@@ -29,7 +29,7 @@ export default async function InsightsPage() {
           <h1 className="text-3xl md:text-5xl font-light tracking-tight">
             AVENEX INSIGHTS
           </h1>
-          <p className="text-sm mt-5 text-zinc-400 font-light tracking-wide leading-relaxed">
+          <p className="text-xs md:text-sm mt-5 text-zinc-400 font-light tracking-wide leading-relaxed">
             Critical analysis and technical research documentation straight from
             our systems engineering core.
           </p>
@@ -48,7 +48,7 @@ export default async function InsightsPage() {
                 className="py-12 grid grid-cols-1 md:grid-cols-4 gap-6 items-start group cursor-pointer"
               >
                 <div className="space-y-1">
-                  <span className="text-[10px] font-mono text-zinc-600 block tracking-widest">
+                  <span className="text-xs md:text-sm font-mono text-zinc-600 block tracking-widest">
                     {new Date(art.createdAt)
                       .toLocaleDateString("en-US", {
                         month: "short",
@@ -56,7 +56,7 @@ export default async function InsightsPage() {
                       })
                       .toUpperCase()}
                   </span>
-                  <span className="text-[9px] font-mono bg-zinc-950 border border-zinc-900 text-zinc-400 px-2 py-0.5 inline-block tracking-widest uppercase">
+                  <span className="text-xs font-mono bg-zinc-950 border border-zinc-900 text-zinc-400 px-2 py-0.5 inline-block tracking-widest uppercase">
                     {art.category}
                   </span>
                 </div>
@@ -66,7 +66,7 @@ export default async function InsightsPage() {
                   </h3>
 
                   {/* Yahan Logic: line-clamp-2 se 2 lines ke baad "..." aa jayega */}
-                  <p className="text-xs text-zinc-400 font-light leading-relaxed max-w-3xl line-clamp-2">
+                  <p className="text-xs md:text-sm text-zinc-400 font-light leading-relaxed max-w-3xl line-clamp-2">
                     {art.description}
                   </p>
 

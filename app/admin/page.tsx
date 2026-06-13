@@ -87,12 +87,12 @@ export default function AdminDashboard() {
     return (
       <div className="max-w-md mx-auto md:my-24 space-y-6">
         <div className="space-y-1">
-          <span className="text-[9px] font-mono text-red-500 uppercase tracking-[0.4em] block">🔒 Restricted Node</span>
+          <span className="text-xs font-mono text-red-500 uppercase tracking-[0.4em] block">🔒 Restricted Node</span>
           <h1 className="text-xl font-light tracking-tight text-zinc-200">ENTER OPERATIONAL GATEWAY</h1>
         </div>
         <form onSubmit={handleVerify} className="space-y-4 pt-4 border-t border-zinc-900">
           <Input type="password" required placeholder="••••••••••••" className="bg-black border-zinc-900 rounded-none text-white text-xs h-11" value={passkey} onChange={(e) => setPasskey(e.target.value)} />
-          {error && <p className="text-[10px] font-mono text-red-500">✕ Authentication mismatch.</p>}
+          {error && <p className="text-xs font-mono text-red-500">✕ Authentication mismatch.</p>}
           <Button type="submit" disabled={loading} className="w-full bg-white text-black hover:bg-zinc-200 text-[10px] tracking-[0.25em] uppercase font-bold py-5 rounded-none">
             {loading ? "Authenticating..." : "Verify Identity"}
           </Button>
@@ -105,10 +105,10 @@ export default function AdminDashboard() {
     <div className="space-y-12 animate-in fade-in duration-500">
       <div className="flex justify-between items-start">
         <div>
-          <span className="text-[10px] font-mono text-green-500 uppercase tracking-[0.4em]">● Node: Authenticated</span>
+          <span className="text-xs font-mono text-green-500 uppercase tracking-[0.4em]">● Node: Authenticated</span>
           <h1 className="text-2xl font-light mt-1">SYSTEMS OVERVIEW</h1>
         </div>
-        <button onClick={handleLogout} className="text-[9px] text-zinc-500 hover:text-red-400 uppercase tracking-widest border border-zinc-900 px-3 py-1 transition-all">Logout</button>
+        <button onClick={handleLogout} className="text-xs text-zinc-500 hover:text-red-400 uppercase tracking-widest border border-zinc-900 px-3 py-1 transition-all">Logout</button>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -118,14 +118,14 @@ export default function AdminDashboard() {
           { label: "Active Openings", val: stats.jobs }
         ].map((item, i) => (
           <div key={i} className="bg-[#050505] border border-zinc-900 p-6 space-y-2">
-            <p className="text-[10px] font-mono text-zinc-500 tracking-widest uppercase">{item.label}</p>
+            <p className="text-xs md:text-sm font-mono text-zinc-500 tracking-widest uppercase">{item.label}</p>
             <p className="text-3xl font-light font-mono">{statsLoading ? "..." : item.val}</p>
           </div>
         ))}
       </div>
 
       <div className="border-t border-zinc-900 pt-8">
-        <h2 className="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-6">Inbound Lead Stream</h2>
+        <h2 className="text-xs md:text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">Inbound Lead Stream</h2>
         
       
        {/* Scrollable Container - Updated with cleaner classes */}

@@ -41,20 +41,20 @@ export default function JobDetailModal({ job, onClose }: { job: any, onClose: ()
         {/* Content Section (Scrollable) */}
         <div className="flex-1 overflow-y-auto p-8 space-y-8 custom-scrollbar">
           <div className="space-y-6">
-            <h4 className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.3em]">
+            <h4 className="text-xs md:text-sm font-mono text-zinc-600 uppercase tracking-[0.3em]">
               Role Specification
             </h4>
-            <div className="text-zinc-400 text-sm leading-relaxed font-light whitespace-pre-line"  dangerouslySetInnerHTML={{ __html: job.description || "" }} />
+            <div className="text-zinc-400 text-xs md:text-sm leading-relaxed  whitespace-pre-line"  dangerouslySetInnerHTML={{ __html: job.description || "" }} />
           </div>
           
           <div className="pt-8 border-t border-zinc-900">
              <div className="grid grid-cols-2 gap-8">
                 <div>
-                  <p className="text-[10px] font-mono text-zinc-600 uppercase mb-1">Employment Type</p>
+                  <p className="text-xs md:text-sm font-mono text-zinc-600 uppercase mb-1">Employment Type</p>
                   <p className="text-zinc-300 text-xs uppercase tracking-widest">{job.type}</p>
                 </div>
                 <div>
-                  <p className="text-[10px] font-mono text-zinc-600 uppercase mb-1">Posted Date</p>
+                  <p className="text-xs md:text-sm font-mono text-zinc-600 uppercase mb-1">Posted Date</p>
                   <p className="text-zinc-300 text-xs uppercase tracking-widest">
                     {new Date(job.createdAt).toLocaleDateString()}
                   </p>
@@ -65,8 +65,8 @@ export default function JobDetailModal({ job, onClose }: { job: any, onClose: ()
 
         {/* Footer Section */}
         <div className="p-8 border-t border-zinc-900 bg-zinc-950/80 backdrop-blur-md">
-           <p className="text-[10px] font-mono text-zinc-500 mb-4 tracking-tight">
-             * Apply through the talent pipeline button on the main careers page.
+           <p className="text-xs md:text-sm font-mono text-zinc-500 mb-4 tracking-tight">
+             * Apply through the Apply Button on the main careers page.
            </p>
            {/* Yahan aap ApplyButton bhi rakh sakte ho agar chahein */}
         </div>

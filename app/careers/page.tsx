@@ -18,7 +18,7 @@ export default async function CareersPage() {
             04 / TALENT PIPELINE
           </span>
           <h1 className="text-3xl md:text-5xl font-light tracking-tight">JOIN AVENEX SYSTEMS</h1>
-          <p className="text-sm mt-5 text-zinc-400 font-light tracking-wide leading-relaxed">
+          <p className="text-xs md:text-sm mt-5 text-zinc-400 font-light tracking-wide leading-relaxed">
             We are constantly tracking elite software engineers capable of building low-latency distributed networks and fault-tolerant cloud engines.
           </p>
         </div>

@@ -53,7 +53,7 @@ export default function ContactPage() {
           <h1 className="text-3xl md:text-4xl font-light tracking-tight text-zinc-100">
             ENGAGE AVENEX SYSTEMS
           </h1>
-          <p className="text-sm mt-5 text-zinc-400 font-light tracking-wide leading-relaxed">
+          <p className="text-xs md:text-sm mt-5 text-zinc-400 font-light tracking-wide leading-relaxed">
             Submit your enterprise specifications or structural infrastructure requirements below.
           </p>
         </div>

@@ -18,7 +18,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Sidebar - Both desktop & mobile aligned */}
       <aside className="w-full md:w-72 border-b md:border-b-0 md:border-r border-zinc-900 p-8 flex flex-col gap-12 bg-[#050505] md:mt-21 mt-15">
         <div> 
-          <h2 className="text-[10px] font-bold tracking-[0.2em] text-zinc-500 uppercase">Avenex Control</h2>
+          <h2 className="text-xs md:text-sm font-bold tracking-[0.2em] text-zinc-500 uppercase">Avenex Control</h2>
           <h1 className="text-xl font-light tracking-tight mt-1 text-white">SYSTEM ADMIN</h1>
         </div>
         
@@ -29,7 +29,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               <Link 
                 key={item.path} 
                 href={item.path}
-                className={`text-[10px] tracking-[0.2em] uppercase py-4 px-4 transition-all duration-300 flex items-center gap-3
+                className={`text-xs tracking-[0.2em] uppercase py-4 px-4 transition-all duration-300 flex items-center gap-3
                   ${isActive 
                     ? "text-white bg-zinc-900/50 border-l-2 border-white" 
                     : "text-zinc-600 hover:text-zinc-300 hover:bg-zinc-900/20 border-l-2 border-transparent"

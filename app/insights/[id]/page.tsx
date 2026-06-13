@@ -2,7 +2,7 @@ import { prisma } from "@/lib/db";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export const revalidate = 0; // Freshness ke liye
+export const revalidate = 0; 
 
 export default async function InsightPage({
   params,
@@ -35,7 +35,7 @@ export default async function InsightPage({
       {/* 2. Article Wrapper */}
       <article className="max-w-3xl mx-auto px-6 -mt-20 relative z-10 pb-24">
         {/* Metadata */}
-        <div className="flex items-center gap-4 mb-8 font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">
+        <div className="flex items-center gap-4 mb-8 font-mono text-xs uppercase tracking-[0.2em] text-zinc-400">
           <span className="border border-zinc-800 px-3 py-1 bg-black">
             {insight.category}
           </span>

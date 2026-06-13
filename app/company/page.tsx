@@ -11,7 +11,7 @@ export default function AboutPage() {
             <br />
             Engineered for <span className="text-zinc-500">Scale.</span>
           </h1>
-          <p className="text-sm text-zinc-400 font-light tracking-wide leading-relaxed max-w-xl mt-5">
+          <p className="text-xs md:text-sm text-zinc-400 font-light tracking-wide leading-relaxed max-w-xl mt-5">
             Avenex Systems is a high-growth technology startup born from the
             necessity for cleaner, more performant software architectures. We
             engineer fault-tolerant, low-latency distributed systems for the
@@ -25,7 +25,7 @@ export default function AboutPage() {
             <h2 className="text-xl md:text-2xl font-light tracking-wide">
               The Startup Mindset
             </h2>
-            <p className="text-xs md:text-sm text-zinc-400 font-light leading-relaxed">
+            <p className="text-xs md:text-sm md:text-sm text-zinc-400 font-light leading-relaxed">
               Avenex Systems is a high-growth technology startup born from the
               necessity for cleaner, more performant software architectures.
               While others bloat their stacks with legacy dependencies, we build
@@ -38,7 +38,7 @@ export default function AboutPage() {
             <h2 className="text-xl md:text-2xl font-light tracking-wide">
               Our Commitment
             </h2>
-            <p className="text-xs md:text-sm text-zinc-400 font-light leading-relaxed">
+            <p className="text-xs md:text-sm md:text-sm text-zinc-400 font-light leading-relaxed">
               We are a team of engineers obsessed with technical debt removal
               and computational efficiency. As a startup, we possess the agility
               to pivot quickly and the technical depth to solve the most complex
@@ -70,7 +70,7 @@ export default function AboutPage() {
               <h3 className="text-xs md:text-sm font-medium mb-2 md:mb-3 group-hover:text-zinc-300 uppercase tracking-widest">
                 {item.label}
               </h3>
-              <p className="text-[10px] md:text-xs text-zinc-500 font-light group-hover:text-zinc-400 leading-relaxed">
+              <p className="text-xs md:text-sm text-zinc-500 font-light group-hover:text-zinc-400 leading-relaxed">
                 {item.desc}
               </p>
             </div>

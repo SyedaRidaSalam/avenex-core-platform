@@ -44,7 +44,7 @@ export default function Home() {
             <h3 className="text-base font-medium tracking-wider uppercase text-zinc-200">
               Enterprise Engineering
             </h3>
-            <p className="text-xs text-zinc-400 font-light leading-relaxed">
+            <p className="text-xs md:text-sm text-zinc-400 font-light leading-relaxed">
               We design decoupled, scalable microservices and solid database
               APIs that form the core backbone of global commercial software
               platforms.
@@ -58,7 +58,7 @@ export default function Home() {
             <h3 className="text-base font-medium tracking-wider uppercase text-zinc-200">
               Adaptive Computations
             </h3>
-            <p className="text-xs text-zinc-400 font-light leading-relaxed">
+            <p className="text-xs md:text-sm text-zinc-400 font-light leading-relaxed">
               Incorporate predictive workflows, modern processing endpoints, and
               customized server-side logic directly into core business
               operations.
@@ -72,7 +72,7 @@ export default function Home() {
             <h3 className="text-base font-medium tracking-wider uppercase text-zinc-200">
               High-Performance Specs
             </h3>
-            <p className="text-xs text-zinc-400 font-light leading-relaxed">
+            <p className="text-xs md:text-sm text-zinc-400 font-light leading-relaxed">
               Zero bloat design. Our tech stack layouts ensure rapid data
               delivery speeds, minimal overhead metrics, and constant cloud
               synchronization.

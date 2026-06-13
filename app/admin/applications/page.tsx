@@ -8,9 +8,9 @@ export default async function ApplicationsPage() {
   });
 
   return (
-    <div className="max-w-6xl space-y-8 p-10">
+    <div className="max-w-6xl space-y-8 ">
       <div className="space-y-1">
-        <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">Pipeline Data</span>
+        <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">Vacancies Data</span>
         <h1 className="text-2xl font-light tracking-tight">INCOMING APPLICATIONS</h1>
       </div>
 
@@ -35,8 +35,8 @@ export default async function ApplicationsPage() {
               </tr>
             ) : (
               apps.map((app: any) => (
-                <tr key={app.id} className="hover:bg-zinc-950/40 transition-colors">
-                  <td className="py-4 text-white font-medium tracking-wide">{app.name}</td>
+                <tr key={app.id} className="hover:bg-zinc-950/40 transition-colors text-xs">
+                  <td className="py-4 text-white  tracking-wide">{app.name}</td>
                   <td className="py-4 font-mono text-zinc-500">{app.email}</td>
                   
                   {/* Dynamically Position aur Job Type */}
