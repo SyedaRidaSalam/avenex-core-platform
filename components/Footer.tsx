@@ -40,7 +40,7 @@ export default function Footer() {
           
           <div className="flex flex-col gap-6">
             <p className="text-[12px] text-zinc-600 tracking-widest font-mono uppercase">
-              © {currentYear} Avenex Systems. All rights reserved.
+              © {currentYear} Avenex. All rights reserved.
             </p>
             
             {/* Social Protocols with Icons */}
