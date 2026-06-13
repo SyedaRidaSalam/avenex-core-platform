@@ -4,6 +4,7 @@ import JobItem from "@/components/JobItem";
 async function getActiveJobs() {
   return await prisma.job.findMany({ orderBy: { createdAt: "desc" } });
 }
+export const revalidate = 0;
 
 export default async function CareersPage() {
   const openPositions = await getActiveJobs();

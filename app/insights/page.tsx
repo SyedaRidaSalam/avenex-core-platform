@@ -13,6 +13,8 @@ async function getInsightsData() {
   }
 }
 
+export const revalidate = 0;
+
 export default async function InsightsPage() {
   const articles = await getInsightsData();
 

@@ -9,7 +9,7 @@ interface SystemStats {
   posts: number;
   jobs: number;
 }
-
+export const revalidate = 0;
 export default function AdminDashboard() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [passkey, setPasskey] = useState<string>("");
