@@ -1,6 +1,9 @@
 import { prisma } from "@/lib/db";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { SiFacebook, SiInstagram, SiX } from 'react-icons/si';
+import { FaLinkedinIn } from "react-icons/fa";
 
 export const revalidate = 0; 
 
@@ -16,7 +19,7 @@ export default async function InsightPage({
 
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* 1. Hero Image with Enhanced Bottom Gradient */}
+      {/* 1. Hero Image */}
       {insight.imageUrl && (
         <div className="relative w-full h-[50vh] overflow-hidden">
           <Image
@@ -26,7 +29,6 @@ export default async function InsightPage({
             className="object-cover scale-[1.02]"
             priority
           />
-          {/* Yahan dark gradient badha diya hai (from-black/90) */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
           <div className="absolute inset-0 bg-black/20" />
         </div>
@@ -34,25 +36,18 @@ export default async function InsightPage({
 
       {/* 2. Article Wrapper */}
       <article className="max-w-3xl mx-auto px-6 -mt-20 relative z-10 pb-24">
-        {/* Metadata */}
         <div className="flex items-center gap-4 mb-8 font-mono text-xs uppercase tracking-[0.2em] text-zinc-400">
-          <span className="border border-zinc-800 px-3 py-1 bg-black">
-            {insight.category}
-          </span>
+          <span className="border border-zinc-800 px-3 py-1 bg-black">{insight.category}</span>
           <span>{new Date(insight.createdAt).toLocaleDateString()}</span>
         </div>
 
-        {/* Title */}
-        <h1 className="text-4xl md:text-6xl font-light tracking-tight mb-8 text-zinc-100">
-          {insight.title}
-        </h1>
+        <h1 className="text-4xl md:text-6xl font-light tracking-tight mb-8 text-zinc-100">{insight.title}</h1>
 
-        {/* Short Description (Premium Intro) */}
         <p className="text-xl text-zinc-400 font-light mb-12 italic border-l border-zinc-800 pl-6">
           {insight.description}
         </p>
 
-        {/* Rich Content - Custom Styling */}
+        {/* Rich Content */}
         <div
           className="prose prose-invert prose-lg prose-zinc max-w-none 
           prose-headings:font-light prose-headings:tracking-tight 
@@ -61,6 +56,25 @@ export default async function InsightPage({
           prose-strong:text-white prose-strong:font-medium"
           dangerouslySetInnerHTML={{ __html: insight.content || "" }}
         />
+
+        {/* 3. Premium Share Section (Added Icons here) */}
+        <div className="mt-20 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600">Share Insight Protocol</span>
+          <div className="flex gap-6 text-zinc-500">
+            <Link href={`https://www.facebook.com/sharer/sharer.php?u=avenex.io/insights/${id}`} target="_blank" className="hover:text-white transition-colors">
+              <SiFacebook size={18} />
+            </Link>
+            <Link href={`https://www.linkedin.com/sharing/share-offsite/?url=avenex.io/insights/${id}`} target="_blank" className="hover:text-white transition-colors">
+              <FaLinkedinIn size={18} />
+            </Link>
+            <Link href={`https://twitter.com/intent/tweet?url=avenex.io/insights/${id}`} target="_blank" className="hover:text-white transition-colors">
+              <SiX size={18} />
+            </Link>
+            <Link href="https://www.instagram.com/avenex.io/" target="_blank" className="hover:text-white transition-colors">
+              <SiInstagram size={18} />
+            </Link>
+          </div>
+        </div>
       </article>
     </main>
   );

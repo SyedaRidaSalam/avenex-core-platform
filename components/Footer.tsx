@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { SiFacebook, SiInstagram, SiX } from 'react-icons/si';
+import { FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,15 +36,33 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <p className="text-[12px] text-zinc-600 tracking-widest font-mono uppercase">
-            © {currentYear} Avenex Systems. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="text-[11px] text-zinc-500 uppercase tracking-widest">System Operational</span>
+        <div className="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+          
+          <div className="flex flex-col gap-6">
+            <p className="text-[12px] text-zinc-600 tracking-widest font-mono uppercase">
+              © {currentYear} Avenex Systems. All rights reserved.
+            </p>
+            
+            {/* Social Protocols with Icons */}
+            <div className="flex gap-6 text-zinc-500">
+              <Link href="https://www.facebook.com/avenex" target="_blank" className="hover:text-white transition-colors">
+                <SiFacebook size={20} />
+              </Link>
+              <Link href="https://www.instagram.com/avenex.io/" target="_blank" className="hover:text-white transition-colors">
+                <SiInstagram size={20} />
+              </Link>
+              <Link href="https://www.linkedin.com/company/avenex-io/" target="_blank" className="hover:text-white transition-colors">
+                <FaLinkedinIn size={20} />
+              </Link> 
+              <Link href="https://x.com/avenexhq" target="_blank" className="hover:text-white transition-colors">
+                <SiX size={20} />
+              </Link>
             </div>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span className="text-[11px] text-zinc-500 uppercase tracking-widest">System Operational</span>
           </div>
         </div>
       </div>
