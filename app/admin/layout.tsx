@@ -10,6 +10,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     { name: "CORE OVERVIEW", path: "/admin" },
     { name: "MANAGE INSIGHTS", path: "/admin/insights" },
     { name: "MANAGE CAREERS", path: "/admin/careers" },
+    { name: "MANAGE APPLICATIONS", path: "/admin/applications" },
   ];
 
   return (

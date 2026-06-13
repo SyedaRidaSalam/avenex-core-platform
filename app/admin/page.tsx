@@ -114,8 +114,8 @@ export default function AdminDashboard() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {[
           { label: "Incoming Leads", val: stats.leads },
-          { label: "Published Logs", val: stats.posts },
-          { label: "Active Pipelines", val: stats.jobs }
+          { label: "Published Insights", val: stats.posts },
+          { label: "Active Openings", val: stats.jobs }
         ].map((item, i) => (
           <div key={i} className="bg-[#050505] border border-zinc-900 p-6 space-y-2">
             <p className="text-[10px] font-mono text-zinc-500 tracking-widest uppercase">{item.label}</p>
@@ -127,29 +127,30 @@ export default function AdminDashboard() {
       <div className="border-t border-zinc-900 pt-8">
         <h2 className="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-6">Inbound Lead Stream</h2>
         
-        {/* Scrollable Container */}
-        <div className="overflow-x-auto max-h-[400px] overflow-y-auto pr-2 border-r border-zinc-900/50">
-          <table className="w-full text-left text-[11px] text-zinc-400">
-            <thead className="sticky top-0 bg-black z-10 text-zinc-600 uppercase tracking-widest border-b border-zinc-900">
-              <tr>
-                <th className="pb-4">Name</th>
-                <th className="pb-4">Email</th>
-                <th className="pb-4">Company</th>
-                <th className="pb-4">Date</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-zinc-900">
-              {leads.map((lead: any) => (
-                <tr key={lead.id} className="hover:bg-zinc-900/20 transition-colors">
-                  <td className="py-4 text-white font-medium">{lead.name}</td>
-                  <td className="py-4 font-mono">{lead.email}</td>
-                  <td className="py-4">{lead.company || "Individual"}</td>
-                  <td className="py-4">{new Date(lead.createdAt).toLocaleDateString()}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+      
+       {/* Scrollable Container - Updated with cleaner classes */}
+<div className="max-h-[200px] overflow-y-auto overflow-x-hidden pr-2 scrollbar-thin">
+  <table className="w-full text-left text-[11px] text-zinc-400 border-collapse">
+    <thead className="sticky top-0 bg-black z-10 text-zinc-600 uppercase tracking-widest border-b border-zinc-900">
+      <tr>
+        <th className="py-2">Name</th>
+        <th className="py-2">Email</th>
+        <th className="py-2">Company</th>
+        <th className="py-2">Date</th>
+      </tr>
+    </thead>
+    <tbody className="divide-y divide-zinc-900/50">
+      {leads.map((lead: any) => (
+        <tr key={lead.id} className="hover:bg-zinc-900/20 transition-colors">
+          <td className="py-3 text-white font-medium">{lead.name}</td>
+          <td className="py-3 font-mono">{lead.email}</td>
+          <td className="py-3">{lead.company || "Individual"}</td>
+          <td className="py-3">{new Date(lead.createdAt).toLocaleDateString()}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
       </div>
     </div>
   );

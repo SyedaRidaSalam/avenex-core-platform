@@ -18,7 +18,7 @@ export default function SolutionsPage() {
   ];
 
   return (
-    // 'pt-20 md:pt-40' se mobile par padding kam aur desktop par original rakhi hai
+    
     <main className="bg-black text-white min-h-screen pt-20 md:pt-40 px-6">
       <div className="max-w-7xl mx-auto space-y-12 md:space-y-16 pb-24">
         
@@ -26,7 +26,7 @@ export default function SolutionsPage() {
         <div className="max-w-xl space-y-2">
           <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">02 / CAPABILITIES</span>
           <h1 className="text-3xl md:text-5xl font-light tracking-tight">OUR ARCHITECTURAL SOLUTIONS</h1>
-          <p className="text-xs text-zinc-400 font-light tracking-wide leading-relaxed">
+          <p className="text-sm mt-5 text-zinc-400 font-light tracking-wide leading-relaxed">
             Industrial-grade software execution designed strictly for performance, scalability, and long-term tech stability.
           </p>
         </div>

@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../lib/generated/prisma" // Yeh aapke lib folder ke andar client banayega
+  output   = "../lib/generated/prisma"
 }
 
 datasource db {
@@ -18,12 +18,14 @@ model Lead {
 }
 
 // 2. Insights / Blogs Table
-model Post {
+model Insights {
   id          String   @id @default(cuid())
   slug        String   @unique
   title       String
   description String
   content     String
+  imageUrl    String?
+  category    Category @default(ARCHITECTURE)
   published   Boolean  @default(false)
   createdAt   DateTime @default(now())
 }
@@ -35,7 +37,27 @@ model Job {
   department  String
   location    String
   type        String
-  description String
+  description String   @db.Text
   active      Boolean  @default(true)
   createdAt   DateTime @default(now())
+
+  applications JobApplication[]
+}
+
+model JobApplication {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  resumeUrl String?
+  createdAt DateTime @default(now())
+
+  // Relation: Har application ek specific Job se judegi
+  jobId String
+  job   Job    @relation(fields: [jobId], references: [id])
+}
+
+enum Category {
+  ARCHITECTURE
+  ENGINEERING
+  SECURITY
 }
