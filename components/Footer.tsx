@@ -31,7 +31,7 @@ export default function Footer() {
             <span className="text-[12px] font-mono text-zinc-600 uppercase tracking-[0.2em] mb-2">Legal</span>
             <Link href="/privacy" className="text-xs md:text-sm text-zinc-400 hover:text-white transition-colors duration-200">Privacy Policy</Link>
             <Link href="/terms" className="text-xs md:text-sm text-zinc-400 hover:text-white transition-colors duration-200">Terms of Service</Link>
-            <Link href="/contact" className="text-xs md:text-sm text-zinc-400 hover:text-white transition-colors duration-200">Support</Link>
+            <Link href="/contact" className="text-xs md:text-sm text-zinc-400 hover:text-white transition-colors duration-200">Contact</Link>
           </div>
         </div>
 
