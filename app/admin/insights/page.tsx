@@ -64,9 +64,9 @@ export default function AdminInsights() {
   };
 
   return (
-    <div className="max-w-xl space-y-8">
+    <div className="max-w-xl space-y-8 mt-10">
       <div className="space-y-1">
-        <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">
+        <span className="text-[12px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">
           Admin Portal
         </span>
         <h1 className="text-2xl font-light tracking-tight">

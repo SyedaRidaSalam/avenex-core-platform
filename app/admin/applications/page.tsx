@@ -8,9 +8,9 @@ export default async function ApplicationsPage() {
   });
 
   return (
-    <div className="max-w-6xl space-y-8 ">
+    <div className="max-w-6xl space-y-8 mt-10">
       <div className="space-y-1">
-        <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">Vacancies Data</span>
+        <span className="text-[12px] font-mono text-zinc-600 uppercase tracking-[0.4em] block">Vacancies Data</span>
         <h1 className="text-2xl font-light tracking-tight">INCOMING APPLICATIONS</h1>
       </div>
 
